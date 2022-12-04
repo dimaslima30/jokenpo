@@ -8,7 +8,7 @@ void gravar_historico(nome, vitoria_jogador, vitoria_computador){
 	//funcao que salva no historico as partidas, contendo nome, rodadas ganhas e rodadas perdidas
 	char vitoria_jogador_string[40], vitoria_computador_string[40];
 	itoa(vitoria_jogador,vitoria_jogador_string,10);
-    itoa(vitoria_computador,vitoria_computador_string,10);
+    	itoa(vitoria_computador,vitoria_computador_string,10);
     
 	FILE * file;
 	file = fopen("historico.txt", "a");
@@ -17,8 +17,7 @@ void gravar_historico(nome, vitoria_jogador, vitoria_computador){
 		getchar();
 		exit(1);
 	}
-	fprintf(file, "\nNick: ");
-	fputs(nome, file);
+	fprintf(file, "\nNick: %s", nome);
 	fprintf(file, "Venceu: ");
 	fputs(vitoria_jogador_string, file);
 	fprintf(file, "------Perdeu: ");
@@ -148,7 +147,7 @@ int main () {
         }
         else if(opcao==2) { //mostrar o historico do jogo
             system("cls");
-			mostrar_historico();
+	    mostrar_historico();
             system("pause");
         }
         else if(opcao==3) { //sair do jogo
