@@ -153,9 +153,7 @@ int main () {
         }
         else if(opcao==3) { //sair do jogo
             system("cls");
-            printf("Voce realmente deseja sair do jogo?\nDigite 1 para sair do jogo ou digite qualquer outro numero para continuar jogando: ");
-            scanf("%i", &loop);
-            
+            loop = 0;
             
         }
         else { //mensagem de tratamento de erro caso o usuario digite uma opcao invalida
