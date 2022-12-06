@@ -152,7 +152,7 @@ int main () {
         }
         else if(opcao==3) { //sair do jogo
             system("cls");
-            loop = 0;
+            loop = 1;
             
         }
         else { //mensagem de tratamento de erro caso o usuario digite uma opcao invalida
